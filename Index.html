@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Something For You ❤️</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial, sans-serif;
+  background:linear-gradient(135deg,#fff1f5,#ffe4ec,#fff8f0);
+  color:#38252b;
+  min-height:100vh;
+}
+
+.page{
+  display:none;
+  min-height:100vh;
+  padding:30px 20px;
+  text-align:center;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
+
+.page.active{
+  display:flex;
+}
+
+.small{
+  color:#b66;
+  letter-spacing:2px;
+  font-size:12px;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+
+h1{
+  font-size:38px;
+  margin-bottom:15px;
+}
+
+h2{
+  font-size:28px;
+  margin-bottom:15px;
+}
+
+p{
+  line-height:1.7;
+  max-width:600px;
+  margin:10px auto;
+}
+
+.heart{
+  font-size:75px;
+  animation:beat 1.2s infinite;
+  margin-bottom:15px;
+}
+
+@keyframes beat{
+  50%{transform:scale(1.15)}
+}
+
+button{
+  border:none;
+  background:#d94b72;
+  color:white;
+  padding:14px 25px;
+  border-radius:30px;
+  font-size:16px;
+  cursor:pointer;
+  margin-top:20px;
+  box-shadow:0 8px 20px #d94b7244;
+}
+
+button:hover{
+  transform:scale(1.03);
+}
+
+.card{
+  width:100%;
+  max-width:650px;
+  background:#ffffffdd;
+  padding:30px;
+  border-radius:25px;
+  box-shadow:0 15px 40px #8d536622;
+}
+
+.photo-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+  margin-top:20px;
+}
+
+.photo{
+  height:180px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#ffd6e2,#ffe9ef);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:45px;
+  overflow:hidden;
+}
+
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.letter{
+  text-align:left;
+  background:#fffaf5;
+  padding:25px;
+  border-radius:15px;
+  line-height:1.9;
+  margin-top:20px;
+  border:1px solid #f1d9df;
+}
+
+.choice{
+  display:block;
+  width:100%;
+  background:#fff;
+  color:#38252b;
+  border:2px solid #f0c4d0;
+  box-shadow:none;
+  margin:10px 0;
+}
+
+.choice.correct{
+  background:#b9edcf;
+  border-color:#58bd86;
+}
+
+.choice.wrong{
+  background:#ffd0d0;
+  border-color:#e87979;
+}
+
+.promise{
+  text-align:left;
+  margin:20px 0;
+}
+
+.promise label{
+  display:block;
+  padding:13px;
+  background:#fff;
+  margin:10px 0;
+  border-radius:12px;
+}
+
+.final{
+  font-size:20px;
+  color:#a83b60;
+  font-weight:bold;
+}
+
+.dots{
+  margin-top:25px;
+  color:#bd7188;
+  font-size:13px;
+}
+
+@media(max-width:500px){
+  h1{font-size:31px}
+  h2{font-size:25px}
+  .card{padding:22px}
+  .photo{height:140px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<section class="page active" id="p1">
+  <div class="heart">❤️</div>
+  <div class="small">A tiny surprise for you</div>
+  <h1>Hey You... 💕</h1>
+  <p>
+    I made something small for you.<br>
+    But please don't rush...
+    there's a little journey waiting inside.
+  </p>
+  <button onclick="next(2)">Start the surprise →</button>
+</section>
+
+
+<!-- PAGE 2 -->
+<section class="page" id="p2">
+  <div class="card">
+    <div class="small">Chapter 01</div>
+    <h2>One Question... 👀</h2>
+
+    <p>
+      Do you know how special you are to me?
+    </p>
+
+    <button onclick="next(3)">Obviously 😌</button>
+    <button onclick="next(3)">Maybe not...</button>
+
+    <div class="dots">1 / 6</div>
+  </div>
+</section>
+
+
+<!-- PAGE 3 -->
+<section class="page" id="p3">
+  <div class="card">
+    <div class="small">Chapter 02 · Our Memories</div>
+    <h2>Our Little Gallery 📸</h2>
+
+    <p>
+      Some moments deserve their own little corner.
+    </p>
+
+    <div class="photo-grid">
+
+      <div class="photo">
+        📷
+      </div>
+
+      <div class="photo">
+        📷
+      </div>
+
+      <div class="photo">
+        📷
+      </div>
+
+      <div class="photo">
+        📷
+      </div>
+
+    </div>
+
+    <p style="font-size:13px;color:#999;">
+      Our memories would look even better here ❤️
+    </p>
+
+    <button onclick="next(4)">Next →</button>
+
+    <div class="dots">2 / 6</div>
+  </div>
+</section>
+
+
+<!-- PAGE 4 -->
+<section class="page" id="p4">
+  <div class="card">
+    <div class="small">Chapter 03 · A Little Game</div>
+    <h2>Let's see if you know me 😏</h2>
+
+    <p>
+      What do you think I would choose?
+    </p>
+
+    <button class="choice" onclick="wrong(this)">
+      A quiet evening together 🌙
+    </button>
+
+    <button class="choice" onclick="correct(this)">
+      You + Me + Good Food ❤️
+    </button>
+
+    <button class="choice" onclick="wrong(this)">
+      A random adventure 🚗
+    </button>
+
+    <p id="gameMessage"></p>
+
+    <button id="gameNext" style="display:none" onclick="next(5)">
+      Okay, one more thing → 
+    </button>
+
+    <div class="dots">3 / 6</div>
+  </div>
+</section>
+
+
+<!-- PAGE 5 -->
+<section class="page" id="p5">
+  <div class="card">
+    <div class="small">Chapter 04 · A Letter</div>
+    <h2>For You, From Me 💌</h2>
+
+    <div class="letter">
+      <p>Hey ❤️,</p>
+
+      <p>
+        I don't always know how to say everything I feel,
+        so I thought I would write it here.
+      </p>
+
+      <p>
+        You have become someone who makes ordinary days
+        feel a little more special.
+      </p>
+
+      <p>
+        Thank you for being you — for the smiles,
+        the conversations, the little moments,
+        and everything in between.
+      </p>
+
+      <p>
+        I don't need a perfect story.
+        I just want more beautiful moments with you.
+      </p>
+
+      <p>
+        So here's my little promise:
+        I'll keep choosing you,
+        keep annoying you,
+        keep making you smile,
+        and keep creating memories with you. ❤️
+      </p>
+
+      <p style="text-align:right;">
+        — Yours, always ❤️
+      </p>
+    </div>
+
+    <button onclick="next(6)">One last thing →</button>
+
+    <div class="dots">4 / 6</div>
+  </div>
+</section>
+
+
+<!-- PAGE 6 -->
+<section class="page" id="p6">
+  <div class="card">
+    <div class="small">Chapter 05 · Our Little Promise</div>
+    <h2>Deal? 🤝❤️</h2>
+
+    <div class="promise">
+
+      <label>
+        <input type="checkbox">
+        More random conversations
+      </label>
+
+      <label>
+        <input type="checkbox">
+        More stupid jokes 😂
+      </label>
+
+      <label>
+        <input type="checkbox">
+        More memories together
+      </label>
+
+      <label>
+        <input type="checkbox">
+        More reasons to smile
+      </label>
+
+    </div>
+
+    <button onclick="next(7)">I agree ❤️</button>
+
+    <div class="dots">5 / 6</div>
+  </div>
+</section>
+
+
+<!-- PAGE 7 -->
+<section class="page" id="p7">
+  <div class="card">
+
+    <div class="heart">💖</div>
+
+    <div class="small">The End... or maybe the beginning?</div>
+
+    <h2>You're Special ❤️</h2>
+
+    <p class="final">
+      If you smiled even once while going through this,
+      then this little website did its job. 😊
+    </p>
+
+    <p>
+      I made this just for you.
+      Because some people deserve more than just
+      a normal "I love you".
+    </p>
+
+    <p style="font-size:30px;">
+      ❤️
+    </p>
+
+    <p>
+      Now come here... I have something to tell you. 😌
+    </p>
+
+  </div>
+</section>
+
+
+<script>
+
+function next(page){
+  document.querySelectorAll(".page").forEach(p=>{
+    p.classList.remove("active");
+  });
+
+  document.getElementById("p"+page).classList.add("active");
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+}
+
+function correct(btn){
+  btn.classList.add("correct");
+
+  document.getElementById("gameMessage").innerHTML =
+    "Correct! 😌❤️ You know me better than you think.";
+
+  document.getElementById("gameNext").style.display="inline-block";
+}
+
+function wrong(btn){
+  btn.classList.add("wrong");
+
+  document.getElementById("gameMessage").innerHTML =
+    "Nice try 😂 But nope... try again!";
+}
+
+</script>
+
+</body>
+</html>
