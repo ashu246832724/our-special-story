@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Little Something For You ❤️</title>
+<title>For Bittu ❤️</title>
 
 <style>
 *{
@@ -14,15 +14,16 @@
 
 body{
   font-family:Arial, sans-serif;
-  background:linear-gradient(135deg,#fff1f5,#ffe4ec,#fff8f0);
-  color:#38252b;
+  background:linear-gradient(135deg,#fff0f5,#ffe1ec);
+  color:#3b1f2b;
   min-height:100vh;
+  overflow-x:hidden;
 }
 
 .page{
   display:none;
   min-height:100vh;
-  padding:30px 20px;
+  padding:35px 22px;
   text-align:center;
   align-items:center;
   justify-content:center;
@@ -33,149 +34,106 @@ body{
   display:flex;
 }
 
+.heart{
+  font-size:85px;
+  animation:beat 1.2s infinite;
+  margin-bottom:20px;
+}
+
+@keyframes beat{
+  50%{transform:scale(1.12)}
+}
+
 .small{
-  color:#b66;
-  letter-spacing:2px;
-  font-size:12px;
-  text-transform:uppercase;
+  color:#b34d70;
+  letter-spacing:3px;
+  font-size:13px;
   margin-bottom:12px;
+  text-transform:uppercase;
 }
 
 h1{
   font-size:38px;
-  margin-bottom:15px;
+  margin-bottom:18px;
 }
 
 h2{
   font-size:28px;
-  margin-bottom:15px;
+  margin-bottom:18px;
 }
 
 p{
-  line-height:1.7;
-  max-width:600px;
-  margin:10px auto;
-}
-
-.heart{
-  font-size:75px;
-  animation:beat 1.2s infinite;
-  margin-bottom:15px;
-}
-
-@keyframes beat{
-  50%{transform:scale(1.15)}
+  font-size:17px;
+  line-height:1.8;
+  max-width:650px;
 }
 
 button{
-  border:none;
-  background:#d94b72;
+  border:0;
+  background:#d94b75;
   color:white;
-  padding:14px 25px;
+  padding:15px 28px;
   border-radius:30px;
   font-size:16px;
-  cursor:pointer;
-  margin-top:20px;
-  box-shadow:0 8px 20px #d94b7244;
+  margin-top:25px;
+  box-shadow:0 10px 25px rgba(217,75,117,.25);
 }
 
-button:hover{
-  transform:scale(1.03);
-}
-
-.card{
-  width:100%;
-  max-width:650px;
-  background:#ffffffdd;
-  padding:30px;
-  border-radius:25px;
-  box-shadow:0 15px 40px #8d536622;
-}
-
-.photo-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:15px;
-  margin-top:20px;
+button:active{
+  transform:scale(.96);
 }
 
 .photo{
-  height:180px;
-  border-radius:18px;
-  background:linear-gradient(135deg,#ffd6e2,#ffe9ef);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:45px;
-  overflow:hidden;
+  width:100%;
+  max-width:350px;
+  max-height:55vh;
+  object-fit:cover;
+  border-radius:25px;
+  box-shadow:0 15px 35px rgba(80,20,40,.22);
+  margin:15px 0 22px;
 }
 
-.photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+.card{
+  background:rgba(255,255,255,.75);
+  padding:25px 20px;
+  border-radius:28px;
+  max-width:650px;
+  box-shadow:0 15px 40px rgba(80,20,40,.12);
 }
 
 .letter{
   text-align:left;
-  background:#fffaf5;
-  padding:25px;
-  border-radius:15px;
+  white-space:pre-line;
+  font-size:17px;
   line-height:1.9;
-  margin-top:20px;
-  border:1px solid #f1d9df;
+}
+
+.signature{
+  text-align:right;
+  margin-top:25px;
+  font-style:italic;
 }
 
 .choice{
-  display:block;
-  width:100%;
-  background:#fff;
-  color:#38252b;
-  border:2px solid #f0c4d0;
-  box-shadow:none;
-  margin:10px 0;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 
-.choice.correct{
-  background:#b9edcf;
-  border-color:#58bd86;
-}
-
-.choice.wrong{
-  background:#ffd0d0;
-  border-color:#e87979;
-}
-
-.promise{
-  text-align:left;
-  margin:20px 0;
-}
-
-.promise label{
-  display:block;
-  padding:13px;
-  background:#fff;
-  margin:10px 0;
-  border-radius:12px;
+.choice button{
+  margin-top:15px;
 }
 
 .final{
-  font-size:20px;
-  color:#a83b60;
-  font-weight:bold;
+  font-size:42px;
+  margin-bottom:15px;
 }
 
-.dots{
+.footer{
   margin-top:25px;
-  color:#bd7188;
-  font-size:13px;
-}
-
-@media(max-width:500px){
-  h1{font-size:31px}
-  h2{font-size:25px}
-  .card{padding:22px}
-  .photo{height:140px}
+  font-size:12px;
+  color:#9a6375;
 }
 </style>
 </head>
@@ -183,260 +141,269 @@ button:hover{
 <body>
 
 <!-- PAGE 1 -->
-<section class="page active" id="p1">
+<section class="page active" id="page1">
   <div class="heart">❤️</div>
+
   <div class="small">A tiny surprise for you</div>
-  <h1>Hey You... 💕</h1>
+
+  <h1>Hey Bittu... 💕</h1>
+
   <p>
-    I made something small for you.<br>
+    I made something small for you.
+    <br>
     But please don't rush...
     there's a little journey waiting inside.
   </p>
-  <button onclick="next(2)">Start the surprise →</button>
+
+  <button onclick="nextPage()">Start the surprise →</button>
+
+  <div class="footer">Made with a little love ❤️</div>
 </section>
 
 
 <!-- PAGE 2 -->
-<section class="page" id="p2">
-  <div class="card">
-    <div class="small">Chapter 01</div>
-    <h2>One Question... 👀</h2>
+<section class="page" id="page2">
 
-    <p>
-      Do you know how special you are to me?
-    </p>
+  <div class="small">Chapter 01 · The girl</div>
 
-    <button onclick="next(3)">Obviously 😌</button>
-    <button onclick="next(3)">Maybe not...</button>
+  <h2>Someone very special 📸</h2>
 
-    <div class="dots">1 / 6</div>
-  </div>
+  <img class="photo" src="IMG-20261007-WA0000.jpg">
+
+  <p>
+    Pata hai Bittu...
+    tumhari photos dekhte hue bhi kabhi-kabhi
+    mujhe lagta hai ki ek photo tumhari poori story
+    bata hi nahi sakti. ❤️
+  </p>
+
+  <button onclick="nextPage()">There's more →</button>
 </section>
 
 
 <!-- PAGE 3 -->
-<section class="page" id="p3">
-  <div class="card">
-    <div class="small">Chapter 02 · Our Memories</div>
-    <h2>Our Little Gallery 📸</h2>
+<section class="page" id="page3">
 
-    <p>
-      Some moments deserve their own little corner.
-    </p>
+  <div class="small">Chapter 02 · Little moments</div>
 
-    <div class="photo-grid">
+  <h2>And then... there is you 🥰</h2>
 
-      <div class="photo">
-        📷
-      </div>
+  <img class="photo" src="IMG-20261007-WA0001.jpg">
 
-      <div class="photo">
-        📷
-      </div>
+  <p>
+    Kabhi simple si smile,
+    kabhi gussa,
+    kabhi bilkul chup...
+    aur phir bhi pata nahi kyun,
+    tum har version mein meri favourite ho.
+  </p>
 
-      <div class="photo">
-        📷
-      </div>
-
-      <div class="photo">
-        📷
-      </div>
-
-    </div>
-
-    <p style="font-size:13px;color:#999;">
-      Our memories would look even better here ❤️
-    </p>
-
-    <button onclick="next(4)">Next →</button>
-
-    <div class="dots">2 / 6</div>
-  </div>
+  <button onclick="nextPage()">One more memory →</button>
 </section>
 
 
 <!-- PAGE 4 -->
-<section class="page" id="p4">
-  <div class="card">
-    <div class="small">Chapter 03 · A Little Game</div>
-    <h2>Let's see if you know me 😏</h2>
+<section class="page" id="page4">
 
-    <p>
-      What do you think I would choose?
-    </p>
+  <div class="small">Chapter 03 · You</div>
 
-    <button class="choice" onclick="wrong(this)">
-      A quiet evening together 🌙
-    </button>
+  <h2>My favourite view ❤️</h2>
 
-    <button class="choice" onclick="correct(this)">
-      You + Me + Good Food ❤️
-    </button>
+  <img class="photo" src="IMG-20261007-WA0002.jpg">
 
-    <button class="choice" onclick="wrong(this)">
-      A random adventure 🚗
-    </button>
+  <p>
+    Shayad tumhe khud nahi pata,
+    lekin tumhari presence meri life mein
+    bahut si ordinary cheezon ko special bana deti hai.
+  </p>
 
-    <p id="gameMessage"></p>
-
-    <button id="gameNext" style="display:none" onclick="next(5)">
-      Okay, one more thing → 
-    </button>
-
-    <div class="dots">3 / 6</div>
-  </div>
+  <button onclick="nextPage()">Keep going →</button>
 </section>
 
 
 <!-- PAGE 5 -->
-<section class="page" id="p5">
+<section class="page" id="page5">
+
+  <div class="small">Chapter 04 · Another little memory</div>
+
+  <img class="photo" src="IMG-20261007-WA0003.jpg">
+
+  <p>
+    Aur haan...
+    tum jitni khoobsurat photos mein lagti ho,
+    usse kahin zyada khoobsurat
+    tum meri memories mein lagti ho. ❤️
+  </p>
+
+  <button onclick="nextPage()">I have something to say →</button>
+</section>
+
+
+<!-- PAGE 6 LETTER -->
+<section class="page" id="page6">
+
+  <div class="small">Chapter 05 · A letter for you</div>
+
   <div class="card">
-    <div class="small">Chapter 04 · A Letter</div>
-    <h2>For You, From Me 💌</h2>
+
+    <h2>Dear Bittu ❤️</h2>
 
     <div class="letter">
-      <p>Hey ❤️,</p>
 
-      <p>
-        I don't always know how to say everything I feel,
-        so I thought I would write it here.
-      </p>
+Bichhadte hain...
+tootte hain...
+gussa hote hain...
+kabhi-kabhi ek dusre se door bhi chale jaate hain.
 
-      <p>
-        You have become someone who makes ordinary days
-        feel a little more special.
-      </p>
+Lekin pata nahi hum dono mein aisa kya hai,
+ki kitni bhi baar sab kuch ulajh jaaye,
+aakhir mein hum phir ek dusre ke paas aa hi jaate hain.
 
-      <p>
-        Thank you for being you — for the smiles,
-        the conversations, the little moments,
-        and everything in between.
-      </p>
+Shayad isi ko apna hona kehte hain.
 
-      <p>
-        I don't need a perfect story.
-        I just want more beautiful moments with you.
-      </p>
+Tumse baat karke din achha ho jaata hai,
+aur tumse baat kiye bina din thoda adhura sa lagta hai.
 
-      <p>
-        So here's my little promise:
-        I'll keep choosing you,
-        keep annoying you,
-        keep making you smile,
-        and keep creating memories with you. ❤️
-      </p>
+Aur neend...
 
-      <p style="text-align:right;">
-        — Yours, always ❤️
-      </p>
-    </div>
+Neend sabse achhi tumhare saath hi aati hai.
 
-    <button onclick="next(6)">One last thing →</button>
+Chahe tum mere paas ho
+ya mujhse bahut door...
 
-    <div class="dots">4 / 6</div>
-  </div>
-</section>
+Agar tum door hoti ho,
+toh bhi call par tumhe saath lekar so jaata hoon.
 
+Phone ke doosri taraf tum hoti ho,
+aur is taraf mujhe lagta hai
+jaise tum paas hi ho.
 
-<!-- PAGE 6 -->
-<section class="page" id="p6">
-  <div class="card">
-    <div class="small">Chapter 05 · Our Little Promise</div>
-    <h2>Deal? 🤝❤️</h2>
+Mujhe nahi pata future humare liye kya likh kar rakha hai.
 
-    <div class="promise">
+Bas itna pata hai...
 
-      <label>
-        <input type="checkbox">
-        More random conversations
-      </label>
+Har baar jab hum toot-te hain,
+mera dil tumhe hi dhoondhta hai.
 
-      <label>
-        <input type="checkbox">
-        More stupid jokes 😂
-      </label>
+Har baar jab hum ladte hain,
+andar se mann karta hai ki bas tum maan jao.
 
-      <label>
-        <input type="checkbox">
-        More memories together
-      </label>
+Aur har baar jab tum wapas aati ho,
+lagta hai...
+haan, yahi toh meri jagah hai.
 
-      <label>
-        <input type="checkbox">
-        More reasons to smile
-      </label>
+Tum perfect nahi ho.
+Main bhi nahi hoon.
+
+Hum dono kabhi-kabhi pagal hain,
+kabhi stubborn hain,
+kabhi unnecessarily ladte hain...
+
+Lekin shayad isi imperfect story mein
+hum dono ka sabse beautiful part chhupa hai.
+
+Bas ek baat yaad rakhna...
+
+Doori chahe jitni ho,
+gussa chahe jitna ho,
+life chahe jitni complicated ho...
+
+Tum mere liye hamesha
+"someone special" nahi rahogi.
+
+Tum meri favourite person rahogi. ❤️
 
     </div>
 
-    <button onclick="next(7)">I agree ❤️</button>
+    <div class="signature">
+      — Yours, always ❤️
+    </div>
 
-    <div class="dots">5 / 6</div>
   </div>
+
+  <button onclick="nextPage()">One last thing... →</button>
 </section>
 
 
-<!-- PAGE 7 -->
-<section class="page" id="p7">
-  <div class="card">
+<!-- PAGE 7 GAME -->
+<section class="page" id="page7">
 
-    <div class="heart">💖</div>
+  <div class="small">Final Chapter · One little question</div>
 
-    <div class="small">The End... or maybe the beginning?</div>
+  <h2>Ek chhota sa game 🎮❤️</h2>
 
-    <h2>You're Special ❤️</h2>
+  <p>
+    Agar tumhe dobara choose karna ho...
+    toh kya tum mujhe choose karogi?
+  </p>
 
-    <p class="final">
-      If you smiled even once while going through this,
-      then this little website did its job. 😊
-    </p>
-
-    <p>
-      I made this just for you.
-      Because some people deserve more than just
-      a normal "I love you".
-    </p>
-
-    <p style="font-size:30px;">
-      ❤️
-    </p>
-
-    <p>
-      Now come here... I have something to tell you. 😌
-    </p>
-
+  <div class="choice">
+    <button onclick="yesAnswer()">Of course ❤️</button>
+    <button onclick="yesAnswer()">Obviously 😌</button>
   </div>
+
+  <div id="answer"></div>
+
+</section>
+
+
+<!-- PAGE 8 FINAL -->
+<section class="page" id="page8">
+
+  <div class="final">❤️</div>
+
+  <div class="small">And finally...</div>
+
+  <h1>It's always you, Bittu.</h1>
+
+  <p>
+    Thank you for being a part of my life.
+    <br><br>
+    Chahe kitni bhi baar story rewind ho...
+    <br>
+    main tumhe hi choose karunga.
+  </p>
+
+  <button onclick="heartRain()">Tap for a little magic ✨</button>
+
+  <div id="magic" style="font-size:35px;margin-top:20px;"></div>
+
 </section>
 
 
 <script>
 
-function next(page){
-  document.querySelectorAll(".page").forEach(p=>{
-    p.classList.remove("active");
-  });
+let currentPage = 1;
 
-  document.getElementById("p"+page).classList.add("active");
+function nextPage(){
 
-  window.scrollTo({
-    top:0,
-    behavior:"smooth"
-  });
+  document.getElementById("page"+currentPage)
+    .classList.remove("active");
+
+  currentPage++;
+
+  document.getElementById("page"+currentPage)
+    .classList.add("active");
+
+  window.scrollTo(0,0);
 }
 
-function correct(btn){
-  btn.classList.add("correct");
+function yesAnswer(){
 
-  document.getElementById("gameMessage").innerHTML =
-    "Correct! 😌❤️ You know me better than you think.";
-
-  document.getElementById("gameNext").style.display="inline-block";
+  document.getElementById("answer").innerHTML =
+  "<p style='margin-top:25px;font-size:22px;'>I knew it... 😌❤️</p>" +
+  "<button onclick='nextPage()'>Then come with me →</button>";
 }
 
-function wrong(btn){
-  btn.classList.add("wrong");
+function heartRain(){
 
-  document.getElementById("gameMessage").innerHTML =
-    "Nice try 😂 But nope... try again!";
+  let hearts = "";
+
+  for(let i=0;i<25;i++){
+    hearts += "❤️ ";
+  }
+
+  document.getElementById("magic").innerHTML = hearts;
 }
 
 </script>
